@@ -5,3 +5,14 @@ cpp编译的基本逻辑：预处理、编译、链接。cmake就是描述了这
 因此写cmake的逻辑就是：exe -> cpp -> headers -> lib -> lib_headers
 
 
+googletest 安装编译过程。
+```shell
+git clone https://github.com/google/googletest.git
+cd googletest
+mkdir build
+cd build
+cmake ../
+make -j all
+make install
+# or sudo make install
+```
