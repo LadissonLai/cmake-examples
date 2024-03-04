@@ -103,4 +103,4 @@ target_link_libraries(main ${GTEST_LIBRARIES} mymath_dynamic pthread) # 注意�
 
 ## 完整项目
 
-完整项目请参看github[仓库]()。
+完整项目请参看github[仓库](https://github.com/LadissonLai/cmake-examples.git)。
