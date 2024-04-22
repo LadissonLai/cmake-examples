@@ -10,7 +10,7 @@ SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib) # 设置lib输出路径
 add_subdirectory(src bin) # ADD_SUBDIRECTORY(source_dir [binary_dir] [EXCLUDE_FROM_ALL]) 用于向当前工程添加存放源文件的子目录，并可以指定中间二进制和目标二进制存放的位置
 # add_subdirectory(src)
 
-set(CMAKE_INSTALL_PREFIX "/home/u18/cmake_install") # 可以在外部设置安装路径
+set(CMAKE_INSTALL_PREFIX "/home/u18/cmake_install") # 可以在外部设置安装路径。 cmake -DCMAKE_INSTALL_PREFIX=/user/local ..
 
 install(FILES COPYRIGHT README
     DESTINATION share/doc/
