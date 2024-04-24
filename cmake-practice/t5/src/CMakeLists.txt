@@ -1,2 +1,12 @@
 add_executable(curltest main.cpp)
-target_link_libraries(curltest curl)
+
+find_package(CURL)
+if(CURL_FOUND)
+   include_directories(${CURL_INCLUDE_DIR})
+   message(STATUS "CURL_INCLUDE_DIR: ${CURL_INCLUDE_DIR}")
+#    TARGET_LINK_LIBRARIES(curltest ${CURL_LIBRARY})
+   MESSAGE(STATUS "CURL library found. name:${CURL_LIBRARY}")
+   target_link_libraries(curltest ${CURL_LIBRARY})
+ELSE(CURL_FOUND)
+    MESSAGE(FATAL_ERROR "CURL library not found")
+endif(CURL_FOUND)
